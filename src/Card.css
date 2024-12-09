@@ -1,0 +1,29 @@
+/* Card.css */
+.card {
+    width: 300px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform .5s ease, opacity .5s ease;
+  }
+.fade-in-left {
+    transform: translateX(-160%);
+    opacity:1;
+}
+
+.fade-in-right {
+    transform: translateX(160%);
+    opacity:1;
+}
+
+.visible-left{
+    transform: translateX(-90%);
+    opacity: 1;
+}
+
+.visible-right{
+    transform: translateX(90%);
+    opacity: 1;
+}
