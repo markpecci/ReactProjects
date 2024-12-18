@@ -4,17 +4,28 @@ import Card from './Card';
 
 function App() {
   const [scrollPos, setScrollPos] = useState(0); // To track scroll position
-  const[isVisible, setIsVisible] = useState([false, false]);
+  const[isVisible, setIsVisible] = useState([false, false, false, false]);
 
+  //TODO: make cards in a map and have them more efficiently stored / added
+  /*
+  const cardsData = [
+    { id: 1, text: 'Card 1', positionClass: 'fade-in-left' },
+    { id: 2, text: 'Card 2', positionClass: 'fade-in-right' },
+    // You can add more cards here as needed
+  ];
+*/
   useEffect(() => {
     const handleScroll = () => {
+      console.log('Scrolling detected! Current scroll position:', window.scrollY);
       const currentScroll = window.scrollY;
       setScrollPos(currentScroll);
 
       // Update visibility for cards based on scroll position
       const newVisibility = [
-        scrollPos > 300, // Card 1 becomes visible after 300px
-        scrollPos > 600, // Card 2 becomes visible after 600px
+        currentScroll > 150 && currentScroll < 399, 
+        currentScroll > 400 && currentScroll < 749, 
+        currentScroll > 750 && currentScroll < 1049, 
+        currentScroll > 1050 && currentScroll < 1400, 
       ];
       setIsVisible(newVisibility);
     };
@@ -35,6 +46,14 @@ function App() {
         <Card 
         text="Card 2" 
         position={isVisible[1] ? "fade-in-right visible-right" : "fade-in-right"} 
+        />
+        <Card 
+        text="Card 3" 
+        position={isVisible[2] ? "fade-in-left visible-left" : "fade-in-left"} 
+        />
+        <Card 
+        text="Card 4" 
+        position={isVisible[3] ? "fade-in-right visible-right" : "fade-in-right"} 
         />
       </div>
     </div>
