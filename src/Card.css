@@ -10,12 +10,12 @@
   }
 .fade-in-left {
     transform: translateX(-160%);
-    opacity:1;
+    opacity:0;
 }
 
 .fade-in-right {
     transform: translateX(160%);
-    opacity:1;
+    opacity:0;
 }
 
 .visible-left{
