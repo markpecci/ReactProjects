@@ -22,10 +22,10 @@ function App() {
 
       // Update visibility for cards based on scroll position
       const newVisibility = [
-        currentScroll > 150 && currentScroll < 399, 
-        currentScroll > 400 && currentScroll < 749, 
-        currentScroll > 750 && currentScroll < 1049, 
-        currentScroll > 1050 && currentScroll < 1400, 
+        currentScroll > 150 && currentScroll < 799, 
+        currentScroll > 800 && currentScroll < 1449, 
+        currentScroll > 1450 && currentScroll < 2099, 
+        currentScroll > 2100 && currentScroll < 2749, 
       ];
       setIsVisible(newVisibility);
     };

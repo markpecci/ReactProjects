@@ -2,22 +2,22 @@
 .card {
     position: relative;
     top: 300px;
-    width:300px;
-    height: 200px;
-    background: #222222;
+    width:400px;
+    height: 600px;
+    background: #262626;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 100px;
-    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.2) inset, -10px -10px 10px rgba(64, 64, 64, 0.2) inset;
-    transition: transform .5s ease, opacity .5s ease, top 0.5s ease;
+    box-shadow: 10px 10px 10px rgba(10, 10, 10, 0.2) , -10px -10px 10px #242424 ;
+    transition: transform .5s ease, opacity .75s ease, top 0.5s ease;
   }
 .fade-in-left {
-    transform: translateX(-160%);
+    transform: translateX(-88%);
     opacity:0;
 }
 
 .fade-in-right {
-    transform: translateX(160%);
+    transform: translateX(92%);
     opacity:0;
 }
 
