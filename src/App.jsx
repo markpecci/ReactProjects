@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div>
-      <h1>Mark's Website</h1>
+      <h1>Mark Pecci's Website</h1>
       <div className="card_container">
         <Card         
         title="Card 1" 
