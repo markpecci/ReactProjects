@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Card from './Card';
+import Footer from './footer';
 
 function App() {
   const [scrollPos, setScrollPos] = useState(0); // To track scroll position
-  const[isVisible, setIsVisible] = useState([false, false, false, false]);
+  const[isVisible, setIsVisible] = useState([false, false, false, false, false]);
 
   //TODO: make cards in a map and have them more efficiently stored / added
-  
+  /*
   const cardsData = [
     { id: 1, text: 'Card 1', positionClass: 'fade-in-left' },
     { id: 2, text: 'Card 2', positionClass: 'fade-in-right' },
     // You can add more cards here as needed
   ];
-
+*/
   useEffect(() => {
     const handleScroll = () => {
       console.log('Scrolling detected! Current scroll position:', window.scrollY);
@@ -26,6 +27,7 @@ function App() {
         currentScroll > 800 && currentScroll < 1449, 
         currentScroll > 1450 && currentScroll < 2099, 
         currentScroll > 2100 && currentScroll < 2749, 
+        currentScroll >= 2760
       ];
       setIsVisible(newVisibility);
     };
@@ -60,7 +62,11 @@ function App() {
         position={isVisible[3] ? "fade-in-right visible-right" : "fade-in-right"} 
         />
       </div>
+      <Footer 
+      position = {isVisible[4] ? "visible-bottom" : "fade-in-bottom" }
+        />
     </div>
+    
   );
 
 }

@@ -1,0 +1,40 @@
+
+.footer {
+    background-color: #242424;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    transition: opacity .75s ease;
+
+  }
+  
+  .footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .footer-nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
+
+  .fade-in-bottom {
+    opacity: 0;
+  }
+
+  .visible-bottom {
+    opacity: 1;
+  }
+  
